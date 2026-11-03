@@ -1,0 +1,12 @@
+# Dependencias de ejecución (versiones fijadas para builds reproducibles)
+argon2-cffi==25.1.0
+argon2-cffi-bindings==26.1.0
+cffi==2.1.1
+pycparser==3.0
+cryptography==50.0.2
+
+# Desarrollo / pruebas
+pytest==9.2.0
+
+# Opcional: medidor de fortaleza de Dropbox (se usa solo si está instalado)
+# zxcvbn==4.5.0
