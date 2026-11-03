@@ -94,13 +94,14 @@ def _sin_leet(texto: str) -> str:
 def formatear_tiempo(segundos: float) -> str:
     if segundos < 1:
         return "instantáneo"
-    unidades = (("siglos", 3.15e9), ("años", 3.15e7), ("días", 86400), ("horas", 3600), ("minutos", 60), ("segundos", 1))
-    for nombre, valor in unidades:
+    unidades = (("siglo", "siglos", 3.15e9), ("año", "años", 3.15e7), ("día", "días", 86400),
+                ("hora", "horas", 3600), ("minuto", "minutos", 60), ("segundo", "segundos", 1))
+    for singular, plural, valor in unidades:
         if segundos >= valor:
-            cantidad = segundos / valor
-            if nombre == "siglos" and cantidad > 1e6:
+            cantidad = round(segundos / valor)
+            if plural == "siglos" and cantidad > 1e6:
                 return "más que la edad del universo" if cantidad > 1.4e8 else f"{cantidad:.1e} siglos"
-            return f"{cantidad:,.0f} {nombre}".replace(",", ".")
+            return f"{cantidad:,} {singular if cantidad == 1 else plural}".replace(",", ".")
     return "instantáneo"
 
 
