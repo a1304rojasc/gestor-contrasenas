@@ -1,5 +1,7 @@
 # gestor-contrasenas
 
+[![tests](https://github.com/a1304rojasc/gestor-contrasenas/actions/workflows/tests.yml/badge.svg)](https://github.com/a1304rojasc/gestor-contrasenas/actions/workflows/tests.yml)
+
 Gestor de contraseñas de línea de comandos en Python, hecho **para aprender
 criptografía aplicada**: derivación de claves (Argon2id / PBKDF2), cifrado
 autenticado (AES-256-GCM con datos asociados), generación segura de
